@@ -18,7 +18,7 @@ api.buscarId = function (req, res) {
 }
 
 api.deletarFoto = function (req,res) {
-	fotos.filter(function(foto) {
+	fotos = fotos.filter(function(foto) {
 		return foto._id != req.params.id;	
 	})
 
