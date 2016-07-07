@@ -7,7 +7,6 @@ api.lista = function(req, res) {
 	];
 
 	res.json(fotos);
-
 }
 
 module.exports = api;
