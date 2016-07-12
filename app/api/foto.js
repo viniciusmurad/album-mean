@@ -25,7 +25,7 @@ api.buscarId = function (req, res) {
 
 api.deletarFoto = function (req, res) {
 	model.remove({_id: req.params.id})
-		then(function() {
+		.then(function() {
 			res.sendStatus(204);
 		}, function (error) {
 			console.log(error);

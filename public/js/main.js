@@ -17,5 +17,10 @@ angular.module('albumapp', ['diretivas','ngRoute', 'servicos'])
  		controller: 'FotoCtrl'
  	});
 
+ 	$routeProvider.when('/login', {
+ 		templateUrl: 'partials/login.html',
+ 		controller: 'LoginCtrl'
+ 	});
+
  	$routeProvider.otherwise({ redirectTo: '/fotos' })
  })
