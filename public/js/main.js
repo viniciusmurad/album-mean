@@ -2,9 +2,7 @@ angular.module('albumapp', ['diretivas','ngRoute', 'servicos'])
  .config(function($routeProvider, $locationProvider, $httpProvider) {
 
  	$httpProvider.interceptors.push('authInterceptor');
-
- 	$locationProvider.html5Mode(true);
- 	$routeProvider.when('/fotos', {
+	$routeProvider.when('/fotos', {
  		templateUrl: 'partials/principal.html',
  		controller: 'FotosCtrl'
  	});
