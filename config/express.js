@@ -7,11 +7,13 @@ app.set('secret', 'segredojwt');
 app.use(express.static('./public'));
 app.use(bodyParser.json());
 
-consign({cwd: 'app'})
-	.include('models')
-	.then('api')
-	.then('routes/auth.js')
-	.then('routes')
+consign()
+	.include('app/models')
+	.then('app/api')
+	.then('app/routes/auth.js')
+	.then('app/routes')
 	.into(app);
 
 module.exports = app;
+
+
